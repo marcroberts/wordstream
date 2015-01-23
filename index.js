@@ -39,6 +39,7 @@ io.on('connect', function(socket) {
 function exceptions(word){
   if (word.match(/^https?:/)) return false;
   if (word.match(/^@/)) return false;
+  if (word.match(/&|\/"/)) return false;
 
   return true;
 }
