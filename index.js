@@ -17,7 +17,7 @@ stream = new twitter({
   token_secret: process.env.TWITTER_TOKEN_SECRET
 });
 
-io.set('origins', '*');
+io.set('origins', '*:*');
 
 server.listen(process.env.PORT || 5000);
 
