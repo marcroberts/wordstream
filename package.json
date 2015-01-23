@@ -1,25 +1,24 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.1.2",
-  "description": "A sample Node.js app using Express 4",
+  "name": "wordstream",
+  "version": "0.0.1",
+  "description": "Connect to twitter stream and extract words",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "~4.9.x"
+    "express": "~4.9.x",
+    "socket.io": "~1.3.x",
+    "node-tweet-stream": "1.6.x",
+    "dotenv":"0.4.x",
+    "event-stream": "~3.1.0",
+    "request": "^2.40.0",
+    "split": "^0.3.0",
+    "keyword-extractor": "*",
+    "franc": "0.7.x"
   },
   "engines": {
     "node": "0.10.x"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
-  },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
   "license": "MIT"
 }
