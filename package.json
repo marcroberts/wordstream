@@ -18,7 +18,7 @@
     "franc": "0.7.x"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "8.0.x"
   },
   "license": "MIT"
 }

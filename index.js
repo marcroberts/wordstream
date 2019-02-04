@@ -1,6 +1,7 @@
 var app = require('express')(),
     dotenv = require('dotenv'),
     server = require('http').Server(app),
+    path = require('path'),
     io = require('socket.io')(server),
     xt = require('keyword-extractor'),
     franc = require('franc'),
@@ -21,8 +22,14 @@ io.set('origins', '*:*');
 
 server.listen(process.env.PORT || 5000);
 
+// app.use(app.static('public'));
+
 app.get('/', function(request, response) {
-  response.status(403).send('VERBOTEN');
+  response.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+app.get('/stream.js', function(request, response) {
+  response.sendFile(path.join(__dirname, 'public', 'stream.js'));
 });
 
 io.on('connect', function(socket) {
